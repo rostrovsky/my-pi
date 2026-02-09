@@ -1,0 +1,30 @@
+{
+  "providers": {
+    "lmstudio": {
+      "baseUrl": "http://localhost:1234/v1",
+      "api": "openai-completions",
+      "apiKey": "lmstudio",
+      "models": [
+        {
+          "id": "zai-org/glm-4.7-flash",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 64000,
+          "compat": { "supportsReasoningEffort": true }
+        },
+        {
+          "id": "nvidia/nemotron-3-nano",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 64000,
+          "compat": { "supportsReasoningEffort": true }
+        },
+        {
+          "id": "mistralai/devstral-small-2-2512",
+          "input": ["text", "image"],
+          "contextWindow": 100000
+        }
+      ]
+    }
+  }
+}
